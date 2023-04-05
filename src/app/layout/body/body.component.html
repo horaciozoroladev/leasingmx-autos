@@ -1,0 +1,49 @@
+<section id="cotizar" class="bg-white bg-cotizar-section">
+    <div class="row p-4 ms-lg-4 me-lg-4 ">
+
+        <div class="col-12 col-md-7">
+            <h1 class="title" style="font-size: 3rem;">Conduce el auto de tus sueños.</h1>
+            <h4 class="gray mb-sm-4">Tenemos para ti un plan de arrendamiento de auto seminuevo a precio preferencial y con el
+                máximo
+                beneficio
+                fiscal que la ley permite.</h4>
+
+            <img class="img-fluid" [src]="imagenes.cars" alt="" srcset="">
+        </div>
+
+        <div class="col-12 col-md-5">
+            <app-form-cotizar></app-form-cotizar>
+        </div>
+
+    </div>
+</section>
+
+<section id="estrenar" class="bg-black text-light">
+    <div class="row p-4 ms-lg-4 me-lg-4 ">
+        <h1 class="pt-3 text-light">Estrenar un auto nunca ha sido tan fácil.</h1>
+        <h5 class="pt-3 text-light">El arrendamiento de un seminuevo puede ser aún más valioso si puedes obtener el
+            mejor
+            acuerdo con el distribuidor. LeaseMD lleva a cabo esta negociación por ti, garantizándote el mejor acuerdo
+            posible.</h5>
+    </div>
+</section>
+
+<section id="ofrecemos">
+    <div class="row p-4 ms-lg-4 me-lg-4">
+        <div class="col-12 col-lg-6 col-md-6">
+            <h1 class="sticky-top title" style="font-size: 3rem; margin-top:5%;">Ofrecemos más que el arrendamiento de
+                un
+                seminuevo.</h1>
+        </div>
+        <div class="col-12 col-lg-6 col-md-6">
+            <ng-container *ngFor="let item of [0, 1, 2, 3]">
+                <div class="card mb-3">
+                    <div class="card-body m-3">
+                        <h3 class="b">Smart Gas</h3>
+                        <p>Tarjeta siempre cargada para pagar y deducir tu gasto de combustible.</p>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>

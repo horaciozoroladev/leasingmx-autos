@@ -1,0 +1,58 @@
+<div class="card shadow" [style.height]="isCotizacionOk ? '100%' : 'auto'">
+  <div class="card-body">
+    <h5 class="card-title purple text-center title-cotiza">Solicita una cotización.</h5>
+
+    <ng-container *ngIf="!isCotizacionOk; else cotizacionOk">
+      <form class="form-cotiza text-center" [formGroup]="cotizarForm">
+
+        <div class="float-container mb-4">
+          <label class="float-label" for="idDistribuidor">Distribuidor</label>
+          <select class="float-input" id="idDistribuidor" formControlName="idDistribuidor">
+            <option *ngFor="let item of distribuidoresData" [value]="item.id">{{item.name}}</option>
+          </select>
+        </div>
+
+        <div class="float-container mb-4">
+          <label class="float-label" for="paginaAuto">Página del auto</label>
+          <input [required]="true" [maxlength]="64" class="float-input" type="text" id="paginaAuto"
+            placeholder="Ingresa el stock ID o URL de la página del auto..." formControlName="paginaAuto">
+        </div>
+
+        <div class="float-container mb-4">
+          <label class="float-label" for="nombreCompleto">Tu nombre completo</label>
+          <input [required]="true" [maxlength]="64" class="float-input" type="text" id="nombreCompleto" formControlName="nombreCompleto">
+        </div>
+
+        <div class="float-container mb-4">
+          <label class="float-label" for="email">Tu correo electrónico</label>
+          <input [required]="true" [maxlength]="64" class="float-input" type="email" id="email" formControlName="email">
+        </div>
+
+        <div class="d-flex mb-4">
+          <div class="pt-2 pe-2">
+            <img [src]="imagenes.info" alt="" [width]="35">
+          </div>
+          <div class="pt-2">
+            <p class="text-start gray">Uno de nuestros ejecutivos preparará tu cotización y te la hará llegar a tu
+              correo
+              electrónico.</p>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-blue text-white p-3 mb-4" type="submit" (click)="cotizar()"
+          [disabled]="sendingCotizacion">{{ !sendingCotizacion ? 'SOLICITAR COTIZACIÓN' : 'PLEASE WAIT...'}}</button>
+      </form>
+    </ng-container>
+
+    <ng-template #cotizacionOk>
+      <div class="text-center">
+        <p>¡Tu cotización está en camino!</p>
+        <button class="btn btn-primary btn-blue text-white p-3 mb-4" type="submit" (click)="regresar()"
+          [disabled]="sendingCotizacion">REGRESAR</button>
+      </div>
+    </ng-template>
+
+
+
+  </div>
+</div>

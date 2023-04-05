@@ -1,1 +1,135 @@
-/* You can add global styles to this file, and also import other style files */
+// Fonts
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import 'variables';
+
+// Body
+body {
+    background-color: $white-gray;
+}
+
+// Custom bold
+.b {
+    font-weight: 700;
+}
+
+// Custom Fonts
+h1 {
+    font-family: "Montserrat", sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+input {
+    font-family: "Arial", sans-serif;
+    color: $dark-gray;
+    // color: #989898;
+    font-weight: 400;
+}
+
+.title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+.title-cotiza {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 8%;
+}
+
+
+// Form
+.form-cotiza {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+// Colors
+.gray {
+    color: $gray;
+}
+
+.purple {
+    color: $purple;
+}
+
+
+// Button Blue
+.btn-blue {
+    background-color: $blue-sky;
+    letter-spacing: 3px;
+    font-size: 0.8em;
+}
+
+// Background cotizar
+.bg-cotizar-section {
+    background: linear-gradient(#ffffff, #418dff 40%, #5058fc 60%, #ac68ff, #000000);
+    background-position: bottom;
+    background-size: 100% 60%;
+    background-repeat: no-repeat;
+   
+}
+
+// Custom card
+.card {
+    border: none;
+    border-radius: 0%;
+}
+
+// Input float
+.float-container {
+    border: solid 1px #ccc;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    padding: 0 8px;
+    position: relative;
+}
+
+.float-container:focus-within {
+    border: solid 3px #334f82;
+}
+.float-input {
+    border: none;
+    font-size: 16px;
+    outline: 0;
+    padding: 16px 0 10px;
+    width: 100%;
+}
+
+.float-label {
+    color: black;
+    position: absolute;
+    font-weight: bolder;
+    top: -15px;
+    left: 10px;
+    background: white;
+    padding: 0 8px 0 8px;
+}
+
+// Sections
+#estrenar,
+#ofrecemos {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+#footer {
+    padding-top: 3%;
+}
+
+
+
+// MQ
+
+@media (min-width: 0px) and (max-width: 420px) {
+    .bg-cotizar-section {
+        background-size: 100% 72%;
+    }
+}
